@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Learning Resources</title>
+    <link rel="stylesheet" href="datascience.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="menu-header">
+            <button id="menu-toggle"><i class="fas fa-bars"></i></button>
+            <h1>Menu</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="cohorts.html"><i class="fas fa-video"></i> My Cohorts</a></li>
+                <li><a href="masterclasses.html"><i class="fas fa-chalkboard-teacher"></i> My Masterclasses</a></li>
+                <li><a href="performance.html"><i class="fas fa-chart-line"></i> My Performance Board</a></li>
+            </ul>
+
+            <h4>COURSES AND EVENTS</h4>
+            <ul>
+                <li><a href="courses.html"><i class="fas fa-book"></i> All Courses</a></li>
+                <li><a href="live.html"><i class="fas fa-broadcast-tower"></i> Live Masterclasses</a></li>
+            </ul>
+
+            <h4>START LEARNING FREE</h4>
+            <ul>
+                <li><a href="#"><i class="fas fa-play-circle"></i> Video Career Guidance</a></li>
+                <li class="selected"><a href="free_resources.html"><i class="fas fa-question-circle"></i> Free Resources</a></li>
+                <li><a href="code_clash.html"><i class="fas fa-gamepad"></i> Code Clash</a></li>
+            </ul>
+            <hr class="divider">
+            <ul class="bottom">
+                <li><a href="support.html"><i class="fas fa-life-ring"></i> Help and Support</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <p class="question" id="question">Loading...</p>
+                    </div>
+                    <div class="card-back">
+                        <p class="answer" id="answer">Click to reveal answer</p>
+                    </div>
+                </div>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+
+    <div class="container-right">
+        <div class="hero-section">
+            <h2>Hero's Speak</h2>
+            <div class="hero-carousel">
+                <div class="hero-slider">
+                    <div class="hero-card"><img src="images/jitesh.jpg"></div>
+                    <div class="hero-card"><img src="images/pushpendra.jpg"></div>
+                    <div class="hero-card"><img src="images/kanishka.jpg"></div>
+                </div>
+                <div class="dots">
+                    <span class="dot active" onclick="changeSlide(0)"></span>
+                    <span class="dot" onclick="changeSlide(1)"></span>
+                    <span class="dot" onclick="changeSlide(2)"></span>
+                </div>
+            </div>
+            <h2>Placement News</h2>
+            <ul class="placement-list">
+                <li class="placement-card"><img src="images/kartik.jpg" alt="Kartik Vaishnav"><div><h4>Kartik Vaishnav</h4><p>Data Analyst</p></div></li>
+                <li class="placement-card"><img src="images/nishi.jpg" alt="Nishi Gyanani"><div><h4>Nishi Gyanani</h4><p>Web Development</p></div></li>
+                <li class="placement-card"><img src="images/anuj.jpg" alt="Anuj Sharma"><div><h4>Anuj Sharma</h4><p>Graphic Design</p></div></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="datascience.js"></script>
+</body>
+</html>
