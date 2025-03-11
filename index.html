@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSCube Tech Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Menu</h1>
+            <nav>
+                <ul>
+                    <li><i class="fas fa-home"></i> Home</li>
+                    <li><i class="fas fa-video"></i> My Cohorts</li>
+                    <li><i class="fas fa-chalkboard-teacher"></i> My Masterclasses</li>
+                    <li><i class="fas fa-chart-line"></i> My Performance Board</li>
+                </ul>
+
+                <h2>COURSES AND EVENTS</h2>
+                <ul>
+                    <li><i class="fas fa-book"></i> All Courses</li>
+                    <li><i class="fas fa-broadcast-tower"></i> Live Masterclasses</li>
+                </ul>
+
+                <h2>START LEARNING FREE</h2>
+                <ul>
+                    <li><i class="fas fa-play-circle"></i> Video Career Guidance</li>
+                    <li><i class="fas fa-question-circle"></i> Free Resources</li>
+                </ul>
+              <hr class="divider">
+                <ul class="bottom">
+                    <li><i class="fas fa-life-ring"></i> Help and Support</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="container-right">
+        <div class="hero-section">
+            <h2>Hero's Speak</h2>
+            <div class="hero-carousel">
+                <div class="hero-slider">
+                    <div class="hero-card">
+                        <img src="images/jitesh.jpg" alt="Jitesh Bhojwani">
+                        <p>Jitesh Bhojwani</p>
+                    </div>
+                    <div class="hero-card">
+                        <img src="images/pushpendra.jpg" alt="Pushpendra Singh">
+                        <p>Pushpendra Singh</p>
+                    </div>
+                    <div class="hero-card">
+                        <img src="images/kanishka.jpg" alt="Kanishka Makhijani">
+                        <p>Kanishka Makhijani</p>
+                    </div>
+                </div>
+                <div class="dots">
+                    <span class="dot active" onclick="changeSlide(0)"></span>
+                    <span class="dot" onclick="changeSlide(1)"></span>
+                    <span class="dot" onclick="changeSlide(2)"></span>
+                </div>
+            </div>
+
+            <h2>Placement News</h2>
+            <ul class="placement-list">
+                <li class="placement-card">
+                    <img src="images/kartik.jpg" alt="Kartik Vaishnav">
+                    <div>
+                        <h4>Kartik Vaishnav</h4>
+                        <p>Data Analyst</p>
+                    </div>
+                </li>
+                <li class="placement-card">
+                    <img src="images/nishi.jpg" alt="Nishi Gyanani">
+                    <div>
+                        <h4>Nishi Gyanani</h4>
+                        <p>Web Development</p>
+                    </div>
+                </li>
+                <li class="placement-card">
+                    <img src="images/anuj.jpg" alt="Anuj Sharma">
+                    <div>
+                        <h4>Anuj Sharma</h4>
+                        <p>Graphic Design</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
