@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Times , sans-serif;
+}
+
+body {
+    background-color: #ADD8E6; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    height: 100vh; 
+    align-self: left;
+    position: fixed;
+}
+
+.container-right {
+    display: flex;
+    height: 100vh; 
+    align-self: right;
+    position: fixed;
+}
+
+.sidebar {
+    width: 280px;
+    background: white;
+    padding: 20px;
+    border-right: 2px solid #ddd;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.divider {
+    width: 8%; 
+    margin: 20px auto 10px auto; 
+    border: 1px solid #ddd;
+}
+
+.hero-section {
+    flex-grow: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.hero-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-card {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.hero-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background: gray;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: black;
+}
+
+.placement-list {
+    padding: 0;
+    list-style: none;
+}
+
+.placement-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.placement-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.placement-card div h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.placement-card div p {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+}
