@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="performance.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">WSCube Tech</div>
+        <ul class="nav">
+            <li class="active"><img src="icons/home.svg" alt="Home"></li>
+            <li><img src="icons/stats.svg" alt="Stats"></li>
+            <li><img src="icons/leaderboard.svg" alt="Leaderboard"></li>
+            <li><img src="icons/video.svg" alt="Video"></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <button class="callback-btn">Request Callback</button>
+            <div class="profile-icon">V</div>
+        </header>
+
+        <section class="dashboard">
+            <h2>Dashboard</h2>
+            <div class="score-section">
+                <div class="score-card">
+                    <p>Score</p>
+                    <h3>AVERAGE</h3>
+                    <span class="score-change">📈 <span class="green">2.1%</span> vs last week</span>
+                    <p class="date-range">Analysis from 1-12 March, 2025</p>
+                    <canvas id="barChart"></canvas>
+                    <div class="legend">
+                        <span class="blue-dot"></span> Last 6 days
+                        <span class="gray-dot"></span> Last Week
+                    </div>
+                </div>
+                <button class="view-report">View Report</button>
+            </div>
+
+            <div class="grid">
+                <div class="active-hours">
+                    <h4>Active hours</h4>
+                    <p>From 1-6 Dec, 2020</p>
+                    <canvas id="doughnutChart"></canvas>
+                    <div class="legend">
+                        <span class="blue-dot"></span> Afternoon 40%
+                        <span class="purple-dot"></span> Evening 32%
+                        <span class="gray-dot"></span> Morning 28%
+                    </div>
+                    <button class="view-report">View Report</button>
+                </div>
+
+                <div class="activity-views">
+                    <h4>Activity views</h4>
+                    <p>No. of tests, assessments, clash of codes</p>
+                    <div class="bubbles">
+                        <div class="bubble blue">7 tests</div>
+                        <div class="bubble orange">5 assessments</div>
+                        <div class="bubble cyan">9 clash of codes</div>
+                    </div>
+                </div>
+
+                <div class="leaderboard">
+                    <h4>Leaderboard</h4>
+                    <ul>
+                        <li>Alice <span>9/10</span></li>
+                        <li>Reva <span>9/10</span></li>
+                        <li>Yug <span>8.5/10</span></li>
+                        <li>Garv <span>8.25/10</span></li>
+                    </ul>
+                </div>
+
+                <div class="master-classes">
+                    <h4>Master classes</h4>
+                    <button class="view-report">View Report</button>
+                    <canvas id="lineChart"></canvas>
+                    <div class="legend">
+                        <span class="blue-dot"></span> Last 6 days
+                        <span class="gray-dot"></span> Last Week
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="performance.js"></script>
+</body>
+</html>
