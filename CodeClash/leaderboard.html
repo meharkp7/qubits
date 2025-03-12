@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            max-width: 90%;
+        }
+        .podium {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .podium div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            border-radius: 16px 16px 0 0;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        .second { background: linear-gradient(184deg, rgba(174, 174, 174, 0.60) 0%, rgba(217, 217, 217, 0.60) 100%); height: 140px; width: 100px; }
+        .first { background: linear-gradient(180deg, rgba(216, 184, 1, 0.80) 0%, rgba(245, 228, 134, 0.80) 100%); height: 180px; width: 100px; }
+        .third { background: linear-gradient(178deg, rgba(189, 90, 19, 0.50) 0%, rgba(219, 196, 180, 0.50) 100%); height: 100px; width: 100px; }
+        .leaderboard {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .leaderboard h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="podium">
+            <div class="second">2nd<br>1200 Qts</div>
+            <div class="first">1st<br>1500 Qts</div>
+            <div class="third">3rd<br>500 Qts</div>
+        </div>
+        <div class="leaderboard">
+            <h2>Leaderboard</h2>
+            <ol>
+                <li>Player A - 1400 Qts</li>
+                <li>Player B - 1200 Qts</li>
+                <li>Player C - 1000 Qts</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

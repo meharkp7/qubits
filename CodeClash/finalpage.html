@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Result</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(circle, #4B4E6A 0%, #341542 100%);
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            position: relative;
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .result-box {
+            width: 300px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 25px;
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 20px;
+        }
+        .character {
+            width: 200px;
+            height: 250px;
+            position: absolute;
+            animation: fall 1.5s ease-out forwards;
+        }
+        .left-character { left: 18%; top: -150px; }
+        .right-character { right: 18%; top: -150px; }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-200px) scale(1.5);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .result-box {
+                width: 80%;
+                margin: 20px 0;
+            }
+            .left-character { left: auto; top: -120px; }
+            .right-character { right: auto; top: -120px; }
+        }
+.popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 24px;
+            text-align: center;
+        }
+.btn{
+height:30px;
+width:150px; 
+border-radius:10px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+                <div class="result-box">
+ <img class="character left-character" src="skull.png" alt="Skull Character">
+
+            Code runtime...<br>
+            Number of lines...<br>
+            Accuracy...
+        </div>
+        <div class="result-box">
+<img class="character right-character" src="heart.png" alt="Heart Character">
+            Code runtime...<br>
+            Number of lines...<br>
+            Accuracy...
+        </div>
+        
+    </div>
+<div id="popup" class="popup">Rejett is the Winner!<br><a href="index.html"><button class="btn">End Game</button></a></div>
+    
+    <script>
+        setTimeout(() => {
+            document.getElementById('popup').style.display = 'block';
+        }, 3000);
+    </script>
+</body>
+</html>

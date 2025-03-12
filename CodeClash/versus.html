@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Screen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1C140F;
+            font-family: 'Rubik', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .glow-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle, rgba(54,48,102,0.8) 30%, rgba(28,20,15,1) 80%);
+            z-index: -1;
+        }
+
+        .player-box {
+            width: 250px;
+            height: 350px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 15px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .player-box img {
+            width: 150px;
+            height: 250px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+
+        .player-name {
+            color: white;
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .qubits {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .qubits img {
+            width: 20px;
+            height: 30px;
+            margin-left: 5px;
+        }
+
+        .vs-img {
+            width: 700px;
+            height: auto;
+        }
+
+        .loading-text {
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .player-box {
+                width: 80%;
+                height: auto;
+                padding: 15px;
+            }
+
+            .vs-img {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="glow-bg"></div>
+
+<div class="container">
+    <div class="player-box">
+        <img src="skull.png" alt="Skull Avatar">
+        <div class="player-name">Skull</div>
+        <div class="qubits">50 qubits <img src="qubit-icon.png" alt="Qubit Icon"></div>
+    </div>
+
+    <img src="image 2.png" alt="v/s" class="vs-img">
+
+    <div class="player-box" id="rejett-box">
+        <div id="loading-text" class="loading-text">Searching for opponent...</div>
+    </div>
+</div>
+
+<script>
+    setTimeout(() => {
+        const rejettBox = document.getElementById("rejett-box");
+
+        
+        rejettBox.innerHTML = `
+            <img src="heart.png" alt="Rejett Avatar">
+            <div class="player-name">Rejett</div>
+            <div class="qubits">50 qubits <img src="qubit-icon.png" alt="Qubit Icon"></div>
+            <div class="player-id" style="color: cyan; font-size: 14px; margin-top: 10px;">ID: #${Math.floor(Math.random() * 9000) + 1000}</div>
+        `;
+    }, 5000);
+setTimeout(()=>{ window.location.href = "battle.html"}, 7500);
+
+</script>
+
+</body>
+</html>

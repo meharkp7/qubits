@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1C140F;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            overflow-y: hidden;
+        }
+
+        .profile-container {
+            position: relative;
+            width: 90%;
+            max-width: 700px;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 15px;
+            border: 1px solid #CECECE;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+bottom: 5px;
+        }
+
+        .profile-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #D2D2D2;
+            margin-bottom: 5px;
+        }
+
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            width: 100%;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #4F4F4F;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .input-group select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+        }
+
+        .input-group textarea {
+            height: 100px;
+        }
+
+        .avatar-box {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+
+        }
+
+        .avatar-box img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .done-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .done-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 30px;
+            }
+
+            .avatar-box {
+                width: 100px;
+                height: 100px;
+            }
+
+            .profile-title {
+                font-size: 24px;
+            }
+
+            .done-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile-container">
+    <h1 class="profile-title">PROFILE</h1>
+
+    <!-- Avatar Box Inside Profile -->
+    <div class="avatar-box">
+        <img id="avatar-image" src="skull.png" alt="Avatar">
+    </div>
+
+    <div class="form-container">
+        <div class="input-group">
+            <label>USERNAME</label>
+            <input type="text" placeholder="Enter your username">
+        </div>
+
+        <div class="input-group">
+            <label>SELECT YOUR AVATAR</label>
+            <select id="avatar-select">
+                <option value="skull.png">SKULL</option>
+                <option value="heart.png">Heart</option>
+                <option value="flux.png">Flux</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>BIO</label>
+            <textarea placeholder="Write something about yourself..."></textarea>
+        </div>
+    </div>
+
+    <a href="C:\Users\agarw\OneDrive\Desktop\New folder\index.html"><button class="done-btn">DONE</button></a>
+</div>
+
+<script>
+    document.getElementById('avatar-select').addEventListener('change', function() {
+        let selectedAvatar = this.value;
+        document.getElementById('avatar-image').src = selectedAvatar;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash of Codes - Battle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            background: rgb(0,0,0);
+            font-family: 'Rubik', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+overflow: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+padding:30px;
+        }
+        .player-left {
+            left: 30px;
+            top: 20px;
+        }
+
+
+        /* Player Boxes */
+        .player-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+        }
+
+
+        .player-right {
+            right: 30px;
+            top: 20px;
+        }
+
+        .player-box img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+
+        .score {
+            background: #8A2BE2;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+        }
+
+        /* Question and Editor Section */
+        .game-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 70%;
+        }
+
+        .question-box, .editor-box {
+            width: 48%;
+            height: 300px;
+            padding: 20px;
+            font-size: 22px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .question-box {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid white;
+border-radius:15px;
+        }
+
+        .editor-box {
+            background: #FFFFFF;
+            border: 2px solid #007BFF;
+            color: white;
+            outline: none;
+            overflow-y: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+alignment:center;
+            }
+
+            .game-area {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+            }
+
+            .question-box, .editor-box {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+
+            .player-left, .player-right {
+                position: relative;
+                left: auto;
+                right: auto;
+                top: 0;
+                margin-bottom: 10px;
+            }
+        }
+.corner-image {
+    position: absolute;
+    top: 200px;
+    left: -100px;
+    width: 400px; 
+    height: 100%;
+rotate:-45deg;
+}
+.corner-image1{
+    position: absolute;
+    top: 200px;
+    right: -100px;
+    width: 400px; 
+    height: 100%;
+rotate:45deg;
+
+}
+.runbtn{
+bottom:100px;
+position:absolute;
+}
+    </style>
+</head>
+<body>
+ <div class="player-box player-left">
+        <img src="heart.png" alt="Opponent">
+        <div class="score">5 correct</div>
+    </div>
+
+<div class="container">
+
+    <div class="game-area">
+        <div class="question-box">Question 9)</div>
+        <div class="editor-box" contenteditable="true"> 
+    <textarea id="code-editor" font-color:black height:300px width:48%>"Hello, world!"</textarea>
+    
+    </div>
+
+</div>
+</div>
+<div class="player-box player-right">
+        <img src="skull.png" alt="Player">
+        <div class="score">3 correct</div>
+    </div>
+<a href="finalpage.html"><button class="runbtn">Run Code</button></a>
+<img class="corner-image" src="sword.png" alt:"sword">
+<img class="corner-image1" src="sword.png" alt:"sword">
+</body>
+</html>
