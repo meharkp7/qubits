@@ -1,0 +1,209 @@
+body {
+    display: flex;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    overflow-x: hidden;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sidebar h1 {
+    font-size: 22px;
+    color: #333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    padding: 12px 10px;
+    cursor: pointer;
+    line-height: 1.4;
+    position: relative;
+    border-radius: 5px;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar h4 {
+    font-size: 14px;
+    font-weight: regular;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.selected {
+    color: #007bff;
+    background: rgba(0, 123, 255, 0.1);
+    transform: scale(1.02);
+}
+
+.bottom {
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.sidebar.collapsed h1,
+.sidebar.collapsed h4 {
+    display: none;
+}
+
+.sidebar.collapsed ul li {
+    text-align: center;
+}
+
+.sidebar.collapsed ul li a {
+    justify-content: center;
+}
+
+.sidebar.collapsed ul li a span {
+    display: none;
+}
+
+.sidebar.collapsed + .container-right {
+    margin-left: 80px;
+}
+
+.container-right {
+    margin-left: 250px;
+    flex-grow: 1;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.assessment-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.assessment-container h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.assessment-container h2 i {
+    color: #007bff;
+    margin-right: 8px;
+}
+
+.summary-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 450px;
+    margin: 5px 0;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+.summary-item i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.summary-item:hover {
+    background: rgba(0, 123, 255, 0.15);
+}
+
+.assessment-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.assessment-container button i {
+    margin-right: 5px;
+}
+
+.assessment-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

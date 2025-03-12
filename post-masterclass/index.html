@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-Assessment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="menu-header">
+            <button id="menu-toggle"><i class="fas fa-bars"></i></button>
+            <h1>Menu</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/Users/monicakapoor/qubits/index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="cohorts.html"><i class="fas fa-video"></i> <span>My Cohorts</span></a></li>
+                <li><a href="/Users/monicakapoor/qubits/masterclasses.html"><i class="fas fa-chalkboard-teacher"></i> <span>My Masterclasses</span></a></li>
+                <li><a href="performance.html"><i class="fas fa-chart-line"></i> <span>My Performance Board</span></a></li>
+            </ul>
+
+            <h4>COURSES AND EVENTS</h4>
+            <ul>
+                <li><a href="courses.html"><i class="fas fa-book"></i> <span>All Courses</span></a></li>
+                <li><a href="live.html"><i class="fas fa-broadcast-tower"></i> <span>Live Masterclasses</span></a></li>
+            </ul>
+
+            <h4>START LEARNING FREE</h4>
+            <ul>
+                <li><a href="#"><i class="fas fa-play-circle"></i> <span>Video Career Guidance</span></a></li>
+                <li><a href="/Users/monicakapoor/qubits/resources/free_resources.html"><i class="fas fa-question-circle"></i> <span>Free Resources</span></a></li>
+                <li><a href="code_clash.html"><i class="fas fa-gamepad"></i> <span>Code Clash</span></a></li>
+            </ul>
+            <hr class="divider">
+            <ul class="bottom">
+                <li><a href="support.html"><i class="fas fa-life-ring"></i> <span>Help and Support</span></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container-right">
+        <div class="assessment-container fade-in">
+            <h2><i class="fas fa-book-open"></i> CSS Masterclass - Quick Summary</h2>
+            <p>In this masterclass, you explored key CSS concepts:</p>
+            
+            <div class="summary-list">
+                <div class="summary-item"><i class="fas fa-code"></i> CSS Selectors & Specificity</div>
+                <div class="summary-item"><i class="fas fa-layer-group"></i> Flexbox & Grid Layouts</div>
+                <div class="summary-item"><i class="fas fa-mobile-alt"></i> Responsive Design</div>
+                <div class="summary-item"><i class="fas fa-magic"></i> Animations & Transitions</div>
+            </div>
+
+            <p>Now, it's time to put your skills to the test with a hands-on design challenge!</p>
+            <button id="start-task-btn"><i class="fas fa-play-circle"></i> Start Task</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("start-task-btn").addEventListener("click", () => {
+            window.location.href = "task_page.html"; // Redirect to the task page
+        });
+    </script>
+</body>
+</html>
