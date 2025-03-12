@@ -19,9 +19,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Auto-slide every 3 seconds
     setInterval(() => {
         let nextIndex = (currentIndex + 1) % slides.length;
         updateSlide(nextIndex);
     }, 3000);
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const sidebar = document.querySelector(".sidebar");
+
+    if (menuToggle) {
+        menuToggle.addEventListener("click", function () {
+            sidebar.classList.toggle("collapsed");
+        });
+    }
 });
